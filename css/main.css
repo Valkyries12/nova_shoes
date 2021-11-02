@@ -30,6 +30,12 @@ img {
   margin: 0 auto;
 }
 
+@media (min-width: 800px) {
+  .header {
+    padding: 1rem 0;
+  }
+}
+
 .header__logo {
   border: 1px solid blue;
   width: 100px;
@@ -58,6 +64,14 @@ img {
   font-weight: normal;
   padding: 9px 10px;
   border-radius: 4px;
+}
+
+@media (min-width: 800px) {
+  .header__nav__link {
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+  }
 }
 
 @media (min-width: 300px) {
@@ -107,25 +121,39 @@ img {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+@media (min-width: 800px) {
+  .jumbotron__title {
+    font-size: 72px;
+    font-weight: 300;
+    padding: 1.5rem 2rem;
+    min-width: 70%;
+  }
+}
+
 .main-content {
   border: 1px solid red;
   padding: 1.8rem 2.2rem;
   max-width: 1280px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /*display: flex;*/
   margin: 0 auto;
 }
 
+@media (min-width: 800px) {
+  .main-content {
+    padding: 1.8rem 0;
+  }
+}
+
 .main-content__gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
   border: 1px solid blue;
+}
+
+@media (min-width: 800px) {
+  .main-content__gallery {
+        grid-template-areas: "title desc desc desc" "showcase showcase showcase showcase";
+  }
 }
 
 .main-content__gallery__title {
@@ -137,12 +165,26 @@ img {
   border: 1px solid pink;
 }
 
+@media (min-width: 800px) {
+  .main-content__gallery__title {
+    grid-area: title;
+    font-size: 30px;
+    width: 90%;
+  }
+}
+
 .main-content__gallery__desc {
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
   text-align: left;
   margin-bottom: 1.8rem;
+}
+
+@media (min-width: 800px) {
+  .main-content__gallery__desc {
+    grid-area: desc;
+  }
 }
 
 .main-content__gallery__showcase {
@@ -152,11 +194,24 @@ img {
       grid-template-areas: "pink blackish" "leather leather" "leather leather" "black black" "black black" "redleather red";
 }
 
+@media (min-width: 800px) {
+  .main-content__gallery__showcase {
+    grid-area: showcase;
+        grid-template-areas: "pink blackish black black" "leather leather black black" "leather leather redleather red";
+  }
+}
+
 .clients {
   border: 2px solid green;
   padding: 1.8rem 2.2rem;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .clients {
+    padding: 1.8rem 0;
+  }
 }
 
 .clients__title {
@@ -165,6 +220,13 @@ img {
   font-weight: normal;
   line-height: 32px;
   margin-bottom: 1.8rem;
+}
+
+@media (min-width: 800px) {
+  .clients__title {
+    font-size: 30px;
+    margin: 3rem 0;
+  }
 }
 
 .clients__wrapper {
@@ -176,6 +238,16 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .clients__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 .client__testimony {
@@ -194,6 +266,12 @@ img {
   margin-bottom: .8rem;
 }
 
+@media (min-width: 800px) {
+  .client__testimony__desc {
+    margin-bottom: 2rem;
+  }
+}
+
 .client__testimony__container {
   border: 1px solid yellow;
   display: -ms-grid;
@@ -202,6 +280,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
       grid-template-areas: "photo name" "photo place";
+}
+
+@media (min-width: 800px) {
+  .client__testimony__container {
+    width: 60%;
+  }
 }
 
 .client__testimony__container__person-photo {
@@ -260,6 +344,19 @@ img {
   margin: 0 auto;
 }
 
+@media (min-width: 800px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 8rem;
+  }
+}
+
 .footer__logo {
   width: 75px;
   height: 21px;
@@ -278,10 +375,35 @@ img {
   gap: 1rem;
 }
 
+@media (min-width: 800px) {
+  .footer__social-media {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .footer__social-link img {
+    width: 20px;
+  }
+}
+
 .footer__company-name {
   font-size: 12px;
   line-height: 18px;
   margin-top: 1rem;
+}
+
+@media (min-width: 800px) {
+  .footer__company-name {
+    margin-top: 0;
+  }
+}
+
+.footer__company-name img {
+  width: 94px;
+  height: 14px;
 }
 
 .pink-boot {

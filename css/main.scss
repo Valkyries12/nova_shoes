@@ -28,6 +28,10 @@ img {
     padding: 1rem 1.5rem;
     max-width: 1280px;
     margin: 0 auto;
+
+    @include desktop {
+        padding: 1rem 0;
+    }
     
 
     &__logo {
@@ -49,6 +53,12 @@ img {
             font-weight: normal;
             padding: 9px 10px;
             border-radius: 4px;
+
+            @include desktop {
+                font-size: 14px;
+                color: #000;
+                text-transform: uppercase;
+            }
         }
 
         &__link:nth-child(1),
@@ -59,6 +69,7 @@ img {
 
             @include desktop {
                 display: flex;
+
             }
         }
         &__link:nth-child(3) {
@@ -94,6 +105,14 @@ img {
         padding: 7px 12px;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.6);
+        
+
+        @include desktop {
+            font-size: 72px;
+            font-weight: 300;
+            padding: 1.5rem 2rem;
+            min-width: 70%;
+        }
     }
 
 }
@@ -102,13 +121,23 @@ img {
     border: 1px solid red;
     padding: 1.8rem 2.2rem;
     max-width: 1280px;
-    display: flex;
+    /*display: flex;*/
     margin: 0 auto;
 
+    @include desktop {
+        padding: 1.8rem 0;
+    }
+
     &__gallery {
-        display: flex;
-        flex-direction: column;
+        display: grid;
         border: 1px solid blue;
+
+        @include desktop {
+            grid-template-areas: 
+                "title desc desc desc"
+                "showcase showcase showcase showcase"
+            ;
+        }
 
         &__title {
             text-align: start;
@@ -117,6 +146,12 @@ img {
             width: 70%;
             margin-bottom: 1.8rem;
             border: 1px solid pink;
+
+            @include desktop {
+                grid-area: title;
+                font-size: 30px;
+                width: 90%;
+            }
         }
 
         &__desc {
@@ -125,6 +160,10 @@ img {
             line-height: 24px;
             text-align: left;
             margin-bottom: 1.8rem;
+
+            @include desktop {
+                grid-area: desc;
+            }
         }
 
         &__showcase {
@@ -138,6 +177,15 @@ img {
                 "black black"
                 "redleather red"
             ;
+
+            @include desktop {
+                grid-area: showcase;
+                grid-template-areas:
+                    "pink blackish black black"
+                    "leather leather black black"
+                    "leather leather redleather red"
+                ;
+            }
         }
     }
    
@@ -149,18 +197,32 @@ img {
     max-width: 1280px;
     margin: 0 auto;
 
+    @include desktop {
+        padding: 1.8rem 0;
+    }
+
     &__title {
         font-size: 24px;
         text-align: center;
         font-weight: normal;
         line-height: 32px;
         margin-bottom: 1.8rem;
+
+        @include desktop {
+            font-size: 30px;
+            margin: 3rem 0;
+        }
     }
 
     &__wrapper {
         border: 1px solid pink;
         display: flex;
         flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+            gap: 2rem;
+        }
     }
 }
 
@@ -169,6 +231,7 @@ img {
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 1rem;
+    
 
     &__desc {
         color: #fff;
@@ -177,6 +240,10 @@ img {
         text-align: left;
         margin-top: .6rem;
         margin-bottom: .8rem;
+
+        @include desktop {
+            margin-bottom: 2rem;
+        }
     }
 
     &__container {
@@ -187,6 +254,11 @@ img {
             "photo name"
             "photo place"
         ;
+        
+        @include desktop {
+            width: 60%;
+        }
+
 
         &__person-photo {
             width: 50px;
@@ -194,6 +266,7 @@ img {
             border: 1px solid red;
             margin-right: 1.8rem;
             grid-area: photo;
+
         }
 
         &__person-name {
@@ -204,6 +277,8 @@ img {
             grid-area: name;
             align-self: flex-end;
             margin-left: -4rem;
+
+
         }
 
         &__person-place {
@@ -228,6 +303,12 @@ img {
     gap: 1.2rem;
     margin: 0 auto;
 
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8rem;
+    }
+
     &__logo {
         width: 75px;
         height: 21px;
@@ -242,12 +323,32 @@ img {
         display: flex;
         list-style: none;
         gap: 1rem;
+
+        @include desktop {
+            align-items: center;
+        }
+    }
+
+    &__social-link img {
+        @include desktop {
+            width: 20px;
+        }
     }
 
     &__company-name {
         font-size: 12px;
         line-height: 18px;
         margin-top: 1rem;
+        
+        @include desktop {
+            margin-top: 0;
+            
+        }
+    }
+
+    &__company-name img {
+        width: 94px;
+        height: 14px;
     }
 }
 
