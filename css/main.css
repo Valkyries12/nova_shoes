@@ -7,6 +7,10 @@
   font-family: 'Sora', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   max-width: 100%;
 }
@@ -18,7 +22,6 @@ img {
 }
 
 .header {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,12 +35,11 @@ img {
 
 @media (min-width: 800px) {
   .header {
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
 }
 
 .header__logo {
-  border: 1px solid blue;
   width: 100px;
   height: 36px;
   display: -webkit-box;
@@ -46,6 +48,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 800px) {
+  .header__logo {
+    width: 140px;
+    height: 40px;
+  }
 }
 
 .header__nav {
@@ -74,7 +83,7 @@ img {
   }
 }
 
-@media (min-width: 300px) {
+@media (min-width: 320px) {
   .header__nav__link:nth-child(1), .header__nav__link:nth-child(2) {
     display: none;
   }
@@ -94,11 +103,22 @@ img {
   text-transform: uppercase;
 }
 
+@media (min-width: 800px) {
+  .header__nav__link:nth-child(3) {
+    padding: .9rem;
+  }
+}
+
 .jumbotron {
-  border: 2px solid green;
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .jumbotron {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .jumbotron__hero {
@@ -131,7 +151,6 @@ img {
 }
 
 .main-content {
-  border: 1px solid red;
   padding: 1.8rem 2.2rem;
   max-width: 1280px;
   /*display: flex;*/
@@ -147,7 +166,6 @@ img {
 .main-content__gallery {
   display: -ms-grid;
   display: grid;
-  border: 1px solid blue;
 }
 
 @media (min-width: 800px) {
@@ -162,7 +180,6 @@ img {
   font-weight: normal;
   width: 70%;
   margin-bottom: 1.8rem;
-  border: 1px solid pink;
 }
 
 @media (min-width: 800px) {
@@ -190,7 +207,6 @@ img {
 .main-content__gallery__showcase {
   display: -ms-grid;
   display: grid;
-  border: 3px solid orange;
       grid-template-areas: "pink blackish" "leather leather" "leather leather" "black black" "black black" "redleather red";
 }
 
@@ -202,7 +218,6 @@ img {
 }
 
 .clients {
-  border: 2px solid green;
   padding: 1.8rem 2.2rem;
   max-width: 1280px;
   margin: 0 auto;
@@ -230,7 +245,6 @@ img {
 }
 
 .clients__wrapper {
-  border: 1px solid pink;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,7 +287,6 @@ img {
 }
 
 .client__testimony__container {
-  border: 1px solid yellow;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -291,7 +304,6 @@ img {
 .client__testimony__container__person-photo {
   width: 50px;
   height: 50px;
-  border: 1px solid red;
   margin-right: 1.8rem;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -327,7 +339,6 @@ img {
 }
 
 .footer {
-  border: 1px solid blue;
   max-width: 1280px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,7 +364,8 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 }
 
