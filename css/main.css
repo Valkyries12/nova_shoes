@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.client-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  border: 1px solid blue;
+  width: 100px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.header__nav__link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 9px 10px;
+  border-radius: 4px;
+}
+
+@media (min-width: 300px) {
+  .header__nav__link:nth-child(1), .header__nav__link:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .header__nav__link:nth-child(1), .header__nav__link:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header__nav__link:nth-child(3) {
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  border: 2px solid green;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.jumbotron__hero {
+  max-width: 1280px;
+}
+
+.jumbotron__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  width: 68%;
+  padding: 7px 12px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main-content {
+  border: 1px solid red;
+  padding: 1.8rem 2.2rem;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.main-content__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid blue;
+}
+
+.main-content__gallery__title {
+  text-align: start;
+  font-size: 24px;
+  font-weight: normal;
+  width: 70%;
+  margin-bottom: 1.8rem;
+  border: 1px solid pink;
+}
+
+.main-content__gallery__desc {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 1.8rem;
+}
+
+.main-content__gallery__showcase {
+  display: -ms-grid;
+  display: grid;
+  border: 3px solid orange;
+      grid-template-areas: "pink blackish" "leather leather" "leather leather" "black black" "black black" "redleather red";
+}
+
+.clients {
+  border: 2px solid green;
+  padding: 1.8rem 2.2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.clients__title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 32px;
+  margin-bottom: 1.8rem;
+}
+
+.clients__wrapper {
+  border: 1px solid pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.client__testimony {
+  background-color: #000;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.client__testimony__desc {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  margin-top: .6rem;
+  margin-bottom: .8rem;
+}
+
+.client__testimony__container {
+  border: 1px solid yellow;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "photo name" "photo place";
+}
+
+.client__testimony__container__person-photo {
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  margin-right: 1.8rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: photo;
+}
+
+.client__testimony__container__person-name {
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  text-transform: capitalize;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: name;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: -4rem;
+}
+
+.client__testimony__container__person-place {
+  color: #999;
+  font-size: 11px;
+  text-align: left;
+  text-transform: uppercase;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: place;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: -4rem;
+}
+
+.footer {
+  border: 1px solid blue;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1.8rem;
+  gap: 1.2rem;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  width: 75px;
+  height: 21px;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.footer__company-name {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 1rem;
+}
+
+.pink-boot {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pink;
+}
+
+.blackish-boot {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: blackish;
+}
+
+.leather-boot {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: leather;
+}
+
+.black-boot {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: black;
+}
+
+.red-leather-boot {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: redleather;
+}
+
+.red-boot {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: red;
+}
+/*# sourceMappingURL=main.css.map */

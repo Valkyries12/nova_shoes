@@ -1,0 +1,15 @@
+@import "_variables";
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+    
+}
+
+@mixin mobile {
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+    
+}
