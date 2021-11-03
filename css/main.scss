@@ -60,8 +60,6 @@ img {
             text-decoration: none;
             font-size: 12px;
             font-weight: normal;
-            padding: 9px 10px;
-            border-radius: 4px;
 
             @include desktop {
                 font-size: 14px;
@@ -78,16 +76,33 @@ img {
 
             @include desktop {
                 display: flex;
+                padding-bottom: 6px;
+                transition: border .5s;
+                &:hover {
+                    border-bottom: 2px solid $secondary-color;
+                    
+                }
                 
             }
+
+
         }
         &__link:nth-child(3) {
-            background-color: black;
+            background-color: $secondary-color;
             color: $primary-color;
             text-transform: uppercase;
+            padding: 9px 10px;
+            border-radius: 4px;
 
             @include desktop {
                 padding: .9rem;
+                transition: .5s ease;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    border: 1px solid $secondary-color;
+                }
             }
         }
     }
@@ -159,7 +174,6 @@ img {
             text-align: start;
             font-size: 24px;
             font-weight: normal;
-            width: 70%;
             margin-bottom: 1.8rem;
             // border: 1px solid pink;
 
@@ -348,9 +362,17 @@ img {
 
     &__social-link img {
         @include desktop {
-            width: 20px;
+            max-width: 20px;
         }
+
     }
+
+    // &__social-link:nth-child(1) img {
+    //     @include desktop {
+    //         height:23px;
+    //         width: 20px;
+    //     }
+    // }
 
     &__company-name {
         font-size: 12px;
