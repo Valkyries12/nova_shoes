@@ -1,0 +1,13 @@
+.btn {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 4px;
+    border: 1px solid $secondary-color;
+}
+
+.btn-submit {
+    align-self: flex-end;
+    text-transform: capitalize;
+    padding: 9px 30px;
+    font-size: 0.9rem;
+}
