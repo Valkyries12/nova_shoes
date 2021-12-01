@@ -284,6 +284,7 @@
     -ms-grid-row-span: 1;
     grid-row: 2/3;
     max-width: 524px;
+    min-width: 524px;
   }
 }
 
@@ -295,8 +296,16 @@
   letter-spacing: -.2px;
 }
 
-.contact_us__form input,
+.contact_us__form input {
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
 .contact_us__form textarea {
+  min-height: 269px;
+  max-height: 269px;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
   border-radius: 4px;
@@ -332,10 +341,17 @@
   margin-bottom: 2rem;
   font-size: 0.87rem;
   line-height: 2;
+  font-style: normal;
 }
 
 .contact_us__details i {
   margin-right: .7rem;
+}
+
+@media (min-width: 800px) {
+  .contact_us__details i {
+    font-size: 1.6rem;
+  }
 }
 
 @media (min-width: 800px) {
@@ -369,6 +385,7 @@
 @media (min-width: 800px) {
   .btn-submit {
     padding: 9px 75px;
+    min-width: 200px;
   }
 }
 

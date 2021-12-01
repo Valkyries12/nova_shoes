@@ -34,6 +34,7 @@
             grid-column: 1/2;
             grid-row: 2/3;
             max-width: 524px;
+            min-width: 524px;
         }
 
         &__label {
@@ -44,13 +45,23 @@
             letter-spacing: -.2px;
         }
 
-        input,
-        textarea {
+        input {
             margin-bottom: 1rem;
             padding: .5rem 1rem;
             border-radius: 4px;
             border: 1px solid #999;
         }
+
+        textarea {
+            min-height: 269px;
+            max-height: 269px;
+            margin-bottom: 1rem;
+            padding: .5rem 1rem;
+            border-radius: 4px;
+            border: 1px solid #999;
+        }
+
+        
 
         
     }
@@ -77,9 +88,14 @@
         margin-bottom: 2rem;
         font-size: 0.87rem;
         line-height: 2;
+        font-style: normal;
         
         i {
             margin-right: .7rem;
+
+            @include desktop {
+                font-size: 1.6rem;
+            }
         }
 
         @include desktop {
