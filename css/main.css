@@ -19,6 +19,12 @@
   margin: 0 auto;
 }
 
+@media (min-width: 800px) {
+  .our_products {
+    padding: 1rem 0;
+  }
+}
+
 .our_products__title {
   font-size: 1.5rem;
   font-weight: 500;

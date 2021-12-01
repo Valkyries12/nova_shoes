@@ -36,6 +36,7 @@ img {
     max-width: $max-width;
     margin: 0 auto;
 
+
     @include desktop {
         padding: 2rem 0;
     }
