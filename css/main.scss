@@ -38,7 +38,7 @@ img {
 
 
     @include desktop {
-        padding: 2rem 0;
+        padding: 2rem 1.5rem;
     }
     
 
@@ -123,6 +123,7 @@ img {
 
     @include desktop {
         margin-bottom: 2.5rem;
+        padding: 0 1.5rem;
     }
 
     &__hero {
@@ -157,13 +158,13 @@ img {
 
 .main-content {
     // border: 1px solid red;
-    padding: 1.8rem 2.2rem;
+    padding: 1.8rem 1.5rem;
     max-width: $max-width;
     /*display: flex;*/
     margin: 0 auto;
 
     @include desktop {
-        padding: 1.8rem 0;
+        padding: 1.8rem 1.5rem;
     }
 
     &__gallery {
@@ -235,7 +236,7 @@ img {
     margin: 0 auto;
 
     @include desktop {
-        padding: 1.8rem 0;
+        padding: 1.8rem 1.5rem;
     }
 
     &__title {
@@ -345,6 +346,7 @@ img {
         justify-content: space-between;
         margin-top: 4rem;
         margin-bottom: 2rem;
+        padding: 1rem 1.5rem;
     }
 
     &__logo {
