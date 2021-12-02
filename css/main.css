@@ -303,6 +303,12 @@
   border: 1px solid #999;
 }
 
+@media (min-width: 800px) {
+  .contact_us__form input {
+    min-height: 55px;
+  }
+}
+
 .contact_us__form textarea {
   min-height: 269px;
   max-height: 269px;
@@ -310,6 +316,12 @@
   padding: .5rem 1rem;
   border-radius: 4px;
   border: 1px solid #999;
+}
+
+@media (min-width: 800px) {
+  .contact_us__form textarea {
+    min-height: 269px;
+  }
 }
 
 .contact_us__image {
