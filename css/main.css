@@ -398,6 +398,8 @@
   .btn-submit {
     padding: 9px 75px;
     min-width: 200px;
+    min-height: 55px;
+    font-size: 1.125rem;
   }
 }
 
